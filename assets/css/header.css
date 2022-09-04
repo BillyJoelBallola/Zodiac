@@ -1,0 +1,73 @@
+@import url("./general.css");
+
+/* HEADER */
+
+header{
+    position: absolute;
+    background: transparent;
+    width: 100vw;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-logo{
+    width: 3.125rem;
+    aspect-ratio: 1;
+    margin-left: 4rem;
+}
+
+.nav-primary{
+    display: flex;
+    gap: 2rem;
+    padding-block: 1rem;
+    padding-inline: 6rem 9rem;
+    
+    background: var( --color-blur-bg);
+    backdrop-filter: var(--blur);
+
+    transition: all 100ms ease-in-out;
+
+    z-index: 1000;
+}
+
+.nav-primary[data-visible = "true"]{
+    transform: translateX(0%);
+}
+
+.nav-primary li a{
+    color: var(--text-color-white);
+    text-transform: uppercase;
+}
+
+.nav-close-btn,
+.nav-menu-btn{
+    display: none;
+    position: absolute;
+    width: 20px;
+    aspect-ratio: 1;
+    right: 1rem;
+    z-index: 9999;
+}
+
+@media (max-width: 55em) {
+    .header-logo{
+        margin-left: 1rem;
+    }
+
+    .nav-primary{
+        flex-direction: column;
+
+        position: fixed;
+        inset: 0 0 0 20%;
+        height: 100vh;
+        padding: 10rem 3rem;
+
+        transform: translateX(100%);
+    }
+
+    .active{
+        display: block;
+    }
+}

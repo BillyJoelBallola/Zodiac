@@ -1,0 +1,63 @@
+@import url("./general.css");
+
+/* MAIN */
+
+.home{
+    background-image: url('../images/bg-home.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    color: var(--text-color-white);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-content{
+    width: var(--container-width-lg);
+    margin: auto;
+}
+
+.home-content p{
+    max-width: 50rem;
+}
+
+footer{
+    background: var(--bg-color);
+    color: var(--text-color-white);
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block: 2rem;
+    gap: 1rem;
+}
+
+/* TABLET */
+
+@media (max-width: 55em) {
+    .home{
+        background-image: url('../images/bg-home-mobile.png');
+    }
+
+    .home-content{
+        width: var(--container-width-md);
+        text-align: center;
+    }
+}
+
+
+/* MOBILE */
+
+@media (max-width: 45em) {
+    .home-content{
+        width: var(--container-width-sm);
+    }
+
+    footer > *{
+        width: var(--container-width-sm);
+    }
+}

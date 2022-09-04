@@ -1,0 +1,91 @@
+@import url("./general.css");
+
+body{
+    background-image: url("../images/bg-constellation.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.constellation-map{
+    height: 100vh;
+    width: 100vw;
+    background-image: url("../images/contellation-map.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    display: grid;
+    place-items: center;
+}
+
+.contellation-contiainer{
+    width: var(--container-width-lg);
+    margin: auto;
+
+    display: grid;
+    place-items: center;
+}
+
+.contellation-contiainer div{
+    height: 8rem;
+
+    display: flex;
+    gap: 2rem;
+}
+
+.contellation-contiainer img{
+    transform: scale(.9);
+    transition: all 200ms ease-in-out;
+}
+
+.contellation-contiainer img:hover{
+    transform: scale(1);
+}
+
+footer{
+    background: var(--bg-color);
+    color: var(--text-color-white);
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block: 2rem;
+    gap: 1rem;
+}
+
+
+@media (max-width: 55em){
+    body{
+        background-image: url("../images/bg-constellation-mobile.jpg");
+    }
+    
+    .constellation-map{
+        background-image: url("../images/contellation-map-mobile.png");
+    }
+
+    .contellation-contiainer{
+        width: var(--container-width-md);
+    }
+
+    .contellation-contiainer div{
+        height: 7rem;
+        gap: 1em;
+    }
+}
+
+@media (max-width: 45em){
+    .contellation-contiainer{
+        width: var(--container-width-sm);
+    }
+
+    .contellation-contiainer div{
+        height: 5rem;
+        gap: 0;
+    }
+
+    footer > *{
+        width: var(--container-width-sm);
+    }
+}
